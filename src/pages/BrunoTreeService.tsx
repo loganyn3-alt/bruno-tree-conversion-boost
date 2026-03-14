@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Mail, Clock, MapPin, CheckCircle2, Menu, X, ChevronRight, TreePine, Scissors, Zap, CircleDot } from "lucide-react";
 import heroImage from "@/assets/hero-climber.webp";
 
-const easing = [0.25, 0.1, 0.25, 1];
+const easing = [0.25, 0.1, 0.25, 1] as const;
 
 const services = [
   { title: "Tree Removals", desc: "Safe, efficient removal of hazardous or unwanted trees using precision rigging and expert techniques.", icon: TreePine },
