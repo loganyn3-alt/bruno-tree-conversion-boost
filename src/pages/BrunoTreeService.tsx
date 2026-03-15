@@ -146,27 +146,34 @@ const BrunoTreeService = () => {
         </div>
       </section>
 
+      {/* Wave Divider: Hero → Services */}
+      <div className="relative -mt-1">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="w-full h-12 md:h-20 block">
+          <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" fill="hsl(var(--background))" />
+        </svg>
+      </div>
+
       {/* Services Section */}
-      <section id="services" className="py-24 bg-forest">
+      <section id="services" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-foreground mb-4">Our Services</h2>
-            <div className="w-20 h-1 bg-oak mx-auto rounded-full" />
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">Our Services</h2>
+            <div className="w-20 h-px bg-oak mx-auto" />
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, i) => (
               <motion.div
                 key={i}
-                whileHover={{ y: -8, scale: 1.02 }}
+                whileHover={{ y: -6, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/10 p-8 rounded-3xl text-center cursor-default group"
+                className="text-center cursor-default group p-6"
               >
-                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary-foreground/10 flex items-center justify-center text-primary-foreground group-hover:bg-primary-foreground/20 transition-colors">
-                  <service.icon size={32} strokeWidth={1.5} />
+                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center text-forest">
+                  <service.icon size={36} strokeWidth={1} />
                 </div>
-                <h3 className="text-lg font-serif font-bold text-primary-foreground mb-3">{service.title}</h3>
-                <p className="text-primary-foreground/70 text-sm leading-relaxed">{service.desc}</p>
+                <h3 className="text-lg font-serif font-bold text-foreground mb-3">{service.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -174,13 +181,20 @@ const BrunoTreeService = () => {
           <div className="text-center mt-12">
             <a
               href="#quote"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-surface-elevated/20 backdrop-blur-sm text-primary-foreground border border-primary-foreground/20 rounded-full font-semibold hover:bg-surface-elevated/30 transition-all text-sm"
+              className="inline-flex items-center gap-2 px-8 py-3 border border-forest text-forest rounded-full font-semibold hover:bg-forest hover:text-white transition-all text-sm"
             >
               Learn More <ChevronRight size={16} />
             </a>
           </div>
         </div>
       </section>
+
+      {/* Wave Divider: Services → Testimonials */}
+      <div className="relative">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-10 md:h-16 block bg-background">
+          <path d="M0,30 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="hsl(var(--secondary))" />
+        </svg>
+      </div>
 
       {/* Testimonials Section */}
       <section id="testimonials" className="py-24 bg-background">
