@@ -6,10 +6,10 @@ import heroImage from "@/assets/hero-climber.webp";
 const easing = [0.25, 0.1, 0.25, 1] as const;
 
 const services = [
-  { title: "Tree Removals", desc: "Safe, efficient removal of hazardous or unwanted trees using precision rigging and expert techniques.", icon: TreePine },
-  { title: "Trimming & Pruning", desc: "Structural pruning to improve tree health, safety, and aesthetic value for your property.", icon: Scissors },
-  { title: "Emergency Tree Services", desc: "24/7 rapid response for storm damage, fallen trees, and hazardous limb failure.", icon: Zap },
-  { title: "Stump Removals", desc: "Complete removal of unsightly stumps to reclaim your landscape's footprint.", icon: CircleDot },
+  { title: "Tree Removals", icon: TreePine },
+  { title: "Trimming & Pruning", icon: Scissors },
+  { title: "Emergency Tree Services", icon: Zap },
+  { title: "Stump Removals", icon: CircleDot },
 ];
 
 const testimonials = [
@@ -49,21 +49,18 @@ const BrunoTreeService = () => {
       >
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-forest rounded-lg flex items-center justify-center text-primary-foreground font-serif text-xl font-bold">
-              B
-            </div>
-            <span className="font-serif text-xl font-bold tracking-tight uppercase">
-              Bruno <span className="text-forest">Tree Service</span>
+            <span className="font-serif text-xl font-bold tracking-tight text-brown">
+              Bruno Tree Service, LLC
             </span>
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-            <a href="#services" className="hover:text-forest transition-colors">Services</a>
-            <a href="#about" className="hover:text-forest transition-colors">About</a>
-            <a href="#testimonials" className="hover:text-forest transition-colors">Testimonials</a>
+            <a href="#services" className="hover:text-brown transition-colors">Services</a>
+            <a href="#about" className="hover:text-brown transition-colors">About</a>
+            <a href="#testimonials" className="hover:text-brown transition-colors">Testimonials</a>
             <a
               href="tel:7043459861"
-              className="flex items-center gap-2 bg-forest text-primary-foreground px-5 py-2.5 rounded-full hover:bg-forest-dark transition-all shadow-cta active:scale-95"
+              className="flex items-center gap-2 bg-olive text-primary-foreground px-5 py-2.5 rounded-full hover:bg-olive-dark transition-all shadow-cta active:scale-95"
             >
               <Phone size={16} />
               (704) 345-9861
@@ -90,7 +87,7 @@ const BrunoTreeService = () => {
                 <a href="#testimonials" onClick={() => setIsMenuOpen(false)} className="text-foreground font-medium py-2">Testimonials</a>
                 <a
                   href="tel:7043459861"
-                  className="flex items-center justify-center gap-2 bg-forest text-primary-foreground px-5 py-3 rounded-full font-semibold shadow-cta"
+                  className="flex items-center justify-center gap-2 bg-olive text-primary-foreground px-5 py-3 rounded-full font-semibold shadow-cta"
                 >
                   <Phone size={16} />
                   (704) 345-9861
@@ -102,42 +99,39 @@ const BrunoTreeService = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroImage}
             alt="Professional arborist climbing and working in a tree with safety equipment"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-bark/80 via-bark/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 pt-20 w-full">
+        <div className="relative max-w-7xl mx-auto px-6 pb-24 pt-40 w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: easing }}
             className="max-w-2xl"
           >
-            <span className="inline-block py-1.5 px-4 rounded-full bg-white/15 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-widest mb-6 border border-white/20">
-              Expert Tree Care in North Carolina
-            </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold leading-[1.15] mb-6 text-balance text-white">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-normal leading-[1.1] mb-6 text-white">
               Introducing Bruno Tree Service: Let Our Family Take Care of Yours!
             </h1>
             <p className="text-lg text-white/80 mb-10 max-w-lg leading-relaxed">
-              We take pride in delivering reliable tree care for residential and commercial properties across Charlotte and surrounding areas.
+              We take pride in delivering reliable, professional services rooted in trust, integrity, and a commitment to excellence.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
                 href="#quote"
-                className="px-8 py-4 bg-forest text-white rounded-2xl font-semibold shadow-cta hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider"
+                className="px-8 py-4 bg-olive text-white rounded-lg font-semibold shadow-cta hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider"
               >
                 Get a Free Quote
               </a>
               <a
                 href="tel:7043459861"
-                className="px-8 py-4 bg-transparent text-white border border-white/40 rounded-2xl font-semibold hover:border-white/70 transition-all text-sm uppercase tracking-wider"
+                className="px-8 py-4 bg-transparent text-white border border-white/40 rounded-lg font-semibold hover:border-white/70 transition-all text-sm uppercase tracking-wider"
               >
                 Call Now
               </a>
@@ -146,44 +140,58 @@ const BrunoTreeService = () => {
         </div>
       </section>
 
-      {/* Wave Divider: Hero → Services */}
-      <div className="relative -mt-1">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="w-full h-12 md:h-20 block">
-          <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" fill="hsl(var(--background))" />
+      {/* About Us Section */}
+      <section id="about" className="py-28 bg-background">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal text-brown mb-8">About Us</h2>
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
+            We are a family-owned and operated business dedicated to providing exceptional tree care. With years of experience and a passion for preserving the beauty and safety of your property.
+          </p>
+          <a
+            href="#quote"
+            className="inline-block px-12 py-4 bg-brown text-primary-foreground font-medium text-sm tracking-wide"
+          >
+            Learn more
+          </a>
+        </div>
+      </section>
+
+      {/* Wave Divider: About → Services */}
+      <div className="relative">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="w-full h-12 md:h-20 block bg-background">
+          <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" fill="hsl(var(--olive))" />
         </svg>
       </div>
 
-      {/* Services Section */}
-      <section id="services" className="py-24 bg-background">
+      {/* Services Section — olive green background with white icons */}
+      <section id="services" className="py-24 bg-olive">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">Our Services</h2>
-            <div className="w-20 h-px bg-oak mx-auto" />
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal text-white mb-4">Our services</h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12">
             {services.map((service, i) => (
               <motion.div
                 key={i}
-                whileHover={{ y: -6, scale: 1.02 }}
+                whileHover={{ y: -4, scale: 1.03 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="text-center cursor-default group p-6"
+                className="text-center cursor-default group"
               >
-                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center text-forest">
-                  <service.icon size={36} strokeWidth={1} />
+                <div className="w-28 h-28 mx-auto mb-6 flex items-center justify-center text-white/90">
+                  <service.icon size={56} strokeWidth={0.8} />
                 </div>
-                <h3 className="text-lg font-serif font-bold text-foreground mb-3">{service.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
+                <h3 className="text-lg font-serif font-normal text-white">{service.title}</h3>
               </motion.div>
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-16">
             <a
               href="#quote"
-              className="inline-flex items-center gap-2 px-8 py-3 border border-forest text-forest rounded-full font-semibold hover:bg-forest hover:text-white transition-all text-sm"
+              className="inline-block px-12 py-4 bg-secondary/80 text-foreground font-medium text-sm tracking-wide hover:bg-secondary transition-all"
             >
-              Learn More <ChevronRight size={16} />
+              Learn More
             </a>
           </div>
         </div>
@@ -191,71 +199,66 @@ const BrunoTreeService = () => {
 
       {/* Wave Divider: Services → Testimonials */}
       <div className="relative">
-        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-10 md:h-16 block bg-background">
-          <path d="M0,30 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="hsl(var(--secondary))" />
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="w-full h-12 md:h-20 block bg-olive">
+          <path d="M0,0 L0,40 C360,0 720,80 1080,40 C1260,20 1380,30 1440,40 L1440,0 Z" fill="hsl(var(--olive))" />
+          <path d="M0,40 C360,0 720,80 1080,40 C1260,20 1380,30 1440,40 L1440,80 L0,80 Z" fill="hsl(var(--background))" />
         </svg>
       </div>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-24 bg-secondary">
+      <section id="testimonials" className="py-24 bg-background">
         <div className="max-w-4xl mx-auto px-6 text-center">
           {testimonials.map((t, i) => (
             <div key={i}>
-              <blockquote className="text-xl md:text-2xl lg:text-3xl font-serif leading-relaxed text-foreground mb-8">
+              <blockquote className="text-xl md:text-2xl lg:text-3xl font-serif font-normal leading-relaxed text-brown mb-10">
                 &ldquo;{t.text}&rdquo;
               </blockquote>
-              <p className="text-muted-foreground font-medium">
-                —{t.author} <em className="text-oak">{t.source}</em>
+              <p className="text-brown font-medium text-lg">
+                —{t.author} <em className="text-muted-foreground">{t.source}</em>
               </p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Quote Form + About Section */}
-      <section id="quote" className="py-24 bg-secondary">
+      {/* Quote Form + Free On-Site Quotes Section */}
+      <section id="quote" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* About / Free On-Site Quotes */}
-            <div id="about">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-6">
+            {/* Free On-Site Quotes info */}
+            <div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-normal text-brown mb-6">
                 Free On-Site Quotes
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              <p className="text-muted-foreground text-lg leading-relaxed mb-12">
                 We believe in providing accurate and reliable estimates. That's why we offer free, in-person quotes, ensuring we fully understand your tree care needs.
               </p>
 
-              <div className="mt-12">
-                <h3 className="text-3xl font-serif font-bold text-foreground mb-4">Locally Rooted</h3>
-                <p className="text-muted-foreground text-lg leading-relaxed mb-8">
+              <div>
+                <h3 className="text-3xl font-serif font-normal text-brown mb-4">Locally Rooted</h3>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-10">
                   Based in Monroe, NC, we proudly extend our tree care services to Charlotte and the surrounding areas. Our team is dedicated to keeping your property safe and beautiful.
                 </p>
               </div>
 
-              <div className="space-y-4 mt-8">
+              <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center text-forest">
-                    <Phone size={18} />
-                  </div>
-                  <a href="tel:7043459861" className="text-foreground font-medium hover:text-forest transition-colors">(704) 345-9861</a>
+                  <Phone size={18} className="text-brown" />
+                  <a href="tel:7043459861" className="text-foreground hover:text-brown transition-colors">(704) 345-9861</a>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center text-forest">
-                    <Mail size={18} />
-                  </div>
-                  <a href="mailto:brunotreeservice1@gmail.com" className="text-foreground font-medium hover:text-forest transition-colors">brunotreeservice1@gmail.com</a>
+                  <Mail size={18} className="text-brown" />
+                  <a href="mailto:brunotreeservice1@gmail.com" className="text-foreground hover:text-brown transition-colors">brunotreeservice1@gmail.com</a>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center text-forest">
-                    <MapPin size={18} />
-                  </div>
-                  <span className="text-foreground font-medium">Charlotte, NC & Surrounding Areas</span>
+                  <MapPin size={18} className="text-brown" />
+                  <span className="text-foreground">Charlotte, NC & Surrounding Areas</span>
                 </div>
               </div>
             </div>
 
             {/* Quote Form */}
-            <div className="bg-surface-elevated rounded-4xl shadow-elevated p-8 md:p-12">
+            <div className="bg-surface-elevated rounded-2xl shadow-elevated p-8 md:p-12">
               <AnimatePresence mode="wait">
                 {!formSubmitted ? (
                   <motion.form
@@ -266,7 +269,7 @@ const BrunoTreeService = () => {
                     onSubmit={handleQuoteSubmit}
                     className="space-y-5"
                   >
-                    <h3 className="text-2xl font-serif font-bold text-foreground mb-2">Request Your Free Quote</h3>
+                    <h3 className="text-2xl font-serif font-normal text-brown mb-2">Request Your Free Quote</h3>
                     <p className="text-muted-foreground text-sm mb-6">Fill out the form below and we'll get back to you within 24 hours.</p>
 
                     <div>
@@ -274,7 +277,7 @@ const BrunoTreeService = () => {
                       <input
                         required
                         type="text"
-                        className="w-full px-4 py-3 rounded-2xl bg-secondary border-0 ring-1 ring-border focus:ring-2 focus:ring-forest outline-none transition-all text-foreground"
+                        className="w-full px-4 py-3 rounded-xl bg-secondary border-0 ring-1 ring-border focus:ring-2 focus:ring-olive outline-none transition-all text-foreground"
                         placeholder="John Doe"
                       />
                     </div>
@@ -283,7 +286,7 @@ const BrunoTreeService = () => {
                       <input
                         required
                         type="tel"
-                        className="w-full px-4 py-3 rounded-2xl bg-secondary border-0 ring-1 ring-border focus:ring-2 focus:ring-forest outline-none transition-all text-foreground"
+                        className="w-full px-4 py-3 rounded-xl bg-secondary border-0 ring-1 ring-border focus:ring-2 focus:ring-olive outline-none transition-all text-foreground"
                         placeholder="(704) 000-0000"
                       />
                     </div>
@@ -292,13 +295,13 @@ const BrunoTreeService = () => {
                       <input
                         required
                         type="text"
-                        className="w-full px-4 py-3 rounded-2xl bg-secondary border-0 ring-1 ring-border focus:ring-2 focus:ring-forest outline-none transition-all text-foreground"
+                        className="w-full px-4 py-3 rounded-xl bg-secondary border-0 ring-1 ring-border focus:ring-2 focus:ring-olive outline-none transition-all text-foreground"
                         placeholder="Charlotte, NC"
                       />
                     </div>
                     <div>
                       <label className="block text-xs font-bold uppercase tracking-wider text-muted-foreground mb-2">Service Type</label>
-                      <select className="w-full px-4 py-3 rounded-2xl bg-secondary border-0 ring-1 ring-border focus:ring-2 focus:ring-forest outline-none transition-all text-foreground">
+                      <select className="w-full px-4 py-3 rounded-xl bg-secondary border-0 ring-1 ring-border focus:ring-2 focus:ring-olive outline-none transition-all text-foreground">
                         <option>Tree Removal</option>
                         <option>Trimming & Pruning</option>
                         <option>Stump Removal</option>
@@ -308,7 +311,7 @@ const BrunoTreeService = () => {
                     </div>
                     <button
                       type="submit"
-                      className="w-full py-4 bg-forest text-primary-foreground rounded-2xl font-bold hover:bg-forest-dark transition-all shadow-cta active:scale-[0.98] text-sm uppercase tracking-wider mt-2"
+                      className="w-full py-4 bg-olive text-primary-foreground rounded-xl font-bold hover:bg-olive-dark transition-all shadow-cta active:scale-[0.98] text-sm uppercase tracking-wider mt-2"
                     >
                       Request My Quote
                     </button>
@@ -320,10 +323,10 @@ const BrunoTreeService = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     className="flex flex-col items-center justify-center text-center py-16"
                   >
-                    <div className="w-20 h-20 bg-forest/10 text-forest rounded-full flex items-center justify-center mb-6">
+                    <div className="w-20 h-20 bg-olive/10 text-olive rounded-full flex items-center justify-center mb-6">
                       <CheckCircle2 size={40} />
                     </div>
-                    <h3 className="text-2xl font-serif font-bold text-foreground mb-3">Quote Requested!</h3>
+                    <h3 className="text-2xl font-serif font-normal text-brown mb-3">Quote Requested!</h3>
                     <p className="text-muted-foreground max-w-sm">
                       Thank you! We'll contact you within 24 hours to schedule your free on-site assessment.
                     </p>
@@ -335,42 +338,33 @@ const BrunoTreeService = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-bark text-primary-foreground/60 py-20">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+      {/* Footer — Hours & Contact on cream */}
+      <footer className="py-20 bg-background border-t border-border">
+        <div className="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-16 text-center">
           <div>
-            <div className="flex items-center gap-2 text-primary-foreground mb-6">
-              <div className="w-8 h-8 bg-forest rounded flex items-center justify-center font-serif font-bold">B</div>
-              <span className="font-serif text-lg font-bold uppercase tracking-tight">Bruno Tree Service</span>
+            <h4 className="text-2xl font-serif font-normal text-brown mb-8">Hours</h4>
+            <div className="space-y-4 text-muted-foreground">
+              <div>
+                <p>Monday — Friday</p>
+                <p className="text-foreground">8:00 am — 7:00 pm</p>
+              </div>
+              <div>
+                <p>Saturday — Sunday</p>
+                <p className="text-foreground">7:00 am — 8:00 pm</p>
+              </div>
             </div>
-            <p className="text-sm leading-relaxed max-w-xs">
-              Professional arboriculture services for Charlotte and surrounding areas. Fully licensed and insured for your peace of mind.
-            </p>
           </div>
 
           <div>
-            <h4 className="text-primary-foreground font-bold mb-6 uppercase text-xs tracking-widest">Hours</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex justify-between"><span>Monday — Friday</span> <span className="text-primary-foreground">8:00 AM — 7:00 PM</span></li>
-              <li className="flex justify-between"><span>Saturday — Sunday</span> <span className="text-primary-foreground">7:00 AM — 8:00 PM</span></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-primary-foreground font-bold mb-6 uppercase text-xs tracking-widest">Contact</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-3"><Mail size={14} /> <a href="mailto:brunotreeservice1@gmail.com" className="hover:text-primary-foreground transition-colors">brunotreeservice1@gmail.com</a></li>
-              <li className="flex items-center gap-3"><Phone size={14} /> <a href="tel:7043459861" className="hover:text-primary-foreground transition-colors">(704) 345-9861</a></li>
-              <li className="flex items-center gap-3"><MapPin size={14} /> Charlotte, NC & Surrounding Areas</li>
-            </ul>
+            <h4 className="text-2xl font-serif font-normal text-brown mb-8">Contact</h4>
+            <div className="space-y-3 text-muted-foreground">
+              <p><a href="mailto:brunotreeservice1@gmail.com" className="hover:text-brown transition-colors underline">brunotreeservice1@gmail.com</a></p>
+              <p><a href="tel:7043459861" className="hover:text-brown transition-colors underline">(704) 345-9861</a></p>
+            </div>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-6 pt-16 mt-16 border-t border-primary-foreground/10 text-xs flex flex-col md:flex-row justify-between gap-4">
+        <div className="max-w-4xl mx-auto px-6 pt-16 mt-16 border-t border-border text-xs text-muted-foreground text-center">
           <p>© {new Date().getFullYear()} Bruno Tree Service. All Rights Reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-primary-foreground transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary-foreground transition-colors">Terms of Service</a>
-          </div>
         </div>
       </footer>
     </div>
