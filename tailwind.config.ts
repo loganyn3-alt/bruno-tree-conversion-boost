@@ -55,11 +55,18 @@ export default {
           DEFAULT: "hsl(var(--surface))",
           elevated: "hsl(var(--surface-elevated))",
         },
-        forest: {
-          DEFAULT: "hsl(var(--forest))",
-          dark: "hsl(var(--forest-dark))",
+        olive: {
+          DEFAULT: "hsl(var(--olive))",
+          dark: "hsl(var(--olive-dark))",
         },
-        oak: "hsl(var(--oak))",
+        forest: {
+          DEFAULT: "hsl(var(--olive))",
+          dark: "hsl(var(--olive-dark))",
+        },
+        brown: {
+          DEFAULT: "hsl(var(--brown))",
+          light: "hsl(var(--brown-light))",
+        },
         bark: {
           DEFAULT: "hsl(var(--bark))",
           light: "hsl(var(--bark-light))",
