@@ -6,47 +6,48 @@
 
 @layer base {
   :root {
-    --background: 36 33% 93%;
-    --foreground: 20 20% 12%;
+    --background: 30 18% 87%;
+    --foreground: 30 40% 20%;
 
-    --card: 36 28% 91%;
-    --card-foreground: 20 20% 12%;
+    --card: 30 16% 85%;
+    --card-foreground: 30 40% 20%;
 
-    --popover: 36 30% 95%;
-    --popover-foreground: 20 20% 12%;
+    --popover: 30 18% 89%;
+    --popover-foreground: 30 40% 20%;
 
-    --primary: 150 45% 16%;
-    --primary-foreground: 36 33% 95%;
+    --primary: 67 25% 38%;
+    --primary-foreground: 30 18% 90%;
 
-    --secondary: 36 25% 89%;
-    --secondary-foreground: 20 20% 12%;
+    --secondary: 30 14% 83%;
+    --secondary-foreground: 30 40% 20%;
 
-    --muted: 36 20% 87%;
-    --muted-foreground: 20 10% 40%;
+    --muted: 30 12% 80%;
+    --muted-foreground: 30 20% 45%;
 
-    --accent: 38 48% 54%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 30 60% 30%;
+    --accent-foreground: 30 18% 90%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 36 18% 82%;
-    --input: 36 18% 82%;
-    --ring: 150 45% 16%;
+    --border: 30 14% 78%;
+    --input: 30 14% 78%;
+    --ring: 67 25% 38%;
 
     --radius: 0.75rem;
 
-    --surface: 36 33% 93%;
-    --surface-elevated: 36 30% 96%;
-    --forest: 150 45% 16%;
-    --forest-dark: 150 50% 11%;
-    --oak: 38 48% 54%;
-    --bark: 20 20% 12%;
-    --bark-light: 20 15% 25%;
+    --surface: 30 18% 87%;
+    --surface-elevated: 30 16% 90%;
+    --olive: 67 25% 38%;
+    --olive-dark: 67 30% 32%;
+    --brown: 30 60% 30%;
+    --brown-light: 30 40% 20%;
+    --bark: 30 40% 20%;
+    --bark-light: 30 30% 30%;
 
-    --shadow-card: 0 0 0 1px rgba(0,0,0,0.04), 0 2px 4px rgba(0,0,0,0.04), 0 12px 24px rgba(0,0,0,0.04);
-    --shadow-elevated: 0 0 0 1px rgba(0,0,0,0.04), 0 4px 8px rgba(0,0,0,0.06), 0 24px 48px rgba(0,0,0,0.06);
-    --shadow-cta: 0 4px 14px rgba(27,67,50,0.25);
+    --shadow-card: 0 0 0 1px rgba(0,0,0,0.03), 0 2px 4px rgba(0,0,0,0.03), 0 12px 24px rgba(0,0,0,0.03);
+    --shadow-elevated: 0 0 0 1px rgba(0,0,0,0.03), 0 4px 8px rgba(0,0,0,0.04), 0 24px 48px rgba(0,0,0,0.04);
+    --shadow-cta: 0 4px 14px rgba(90,100,60,0.2);
 
     --font-serif: 'Playfair Display', Georgia, serif;
     --font-sans: 'Inter', system-ui, sans-serif;
