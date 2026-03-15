@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Phone, Mail, Clock, MapPin, CheckCircle2, Menu, X, ChevronRight, TreePine, Scissors, Zap, CircleDot } from "lucide-react";
+import { Phone, Mail, Clock, MapPin, CheckCircle2, ChevronRight, TreePine, Scissors, Zap, CircleDot } from "lucide-react";
 import heroImage from "@/assets/hero-climber.webp";
 
 const easing = [0.25, 0.1, 0.25, 1] as const;
@@ -21,7 +21,6 @@ const testimonials = [
 ];
 
 const BrunoTreeService = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -41,10 +40,8 @@ const BrunoTreeService = () => {
     <div className="min-h-screen bg-background text-foreground font-sans antialiased">
       {/* Sticky Header */}
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-surface-elevated/90 backdrop-blur-md shadow-card"
-            : "bg-transparent"
+        className={`fixed top-0 w-full z-50 border-b border-border transition-all duration-300 ${
+          scrolled ? "bg-surface-elevated shadow-card" : "bg-background"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -54,48 +51,22 @@ const BrunoTreeService = () => {
             </span>
           </div>
 
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-            <a href="#services" className="hover:text-brown transition-colors">Services</a>
-            <a href="#about" className="hover:text-brown transition-colors">About</a>
-            <a href="#testimonials" className="hover:text-brown transition-colors">Testimonials</a>
+          <div className="flex items-center gap-6 text-sm font-medium text-foreground">
+            <a href="#services" className="hover:text-brown transition-colors">
+              Services
+            </a>
+            <a href="#about" className="hover:text-brown transition-colors">
+              About
+            </a>
             <a
               href="tel:7043459861"
-              className="flex items-center gap-2 bg-olive text-primary-foreground px-5 py-2.5 rounded-full hover:bg-olive-dark transition-all shadow-cta active:scale-95"
+              className="flex items-center gap-2 bg-olive text-primary-foreground px-5 py-2.5 rounded-full whitespace-nowrap hover:bg-olive-dark transition-all shadow-cta active:scale-95"
             >
               <Phone size={16} />
               (704) 345-9861
             </a>
           </div>
-
-          <button className="md:hidden text-foreground" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
-
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-surface-elevated/95 backdrop-blur-md border-t border-border overflow-hidden"
-            >
-              <div className="px-6 py-6 flex flex-col gap-4">
-                <a href="#services" onClick={() => setIsMenuOpen(false)} className="text-foreground font-medium py-2">Services</a>
-                <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-foreground font-medium py-2">About</a>
-                <a href="#testimonials" onClick={() => setIsMenuOpen(false)} className="text-foreground font-medium py-2">Testimonials</a>
-                <a
-                  href="tel:7043459861"
-                  className="flex items-center justify-center gap-2 bg-olive text-primary-foreground px-5 py-3 rounded-full font-semibold shadow-cta"
-                >
-                  <Phone size={16} />
-                  (704) 345-9861
-                </a>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </nav>
 
       {/* Hero Section */}
@@ -122,7 +93,7 @@ const BrunoTreeService = () => {
             <p className="text-lg text-white/80 mb-10 max-w-lg leading-relaxed">
               We take pride in delivering reliable, professional services rooted in trust, integrity, and a commitment to excellence.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-start">
               <a
                 href="#quote"
                 className="px-8 py-4 bg-olive text-white rounded-lg font-semibold shadow-cta hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider"
