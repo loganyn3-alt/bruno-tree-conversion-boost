@@ -197,7 +197,7 @@ const BrunoTreeService = () => {
       </div>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-24 bg-background">
+      <section id="testimonials" className="py-24 bg-secondary">
         <div className="max-w-4xl mx-auto px-6 text-center">
           {testimonials.map((t, i) => (
             <div key={i}>
