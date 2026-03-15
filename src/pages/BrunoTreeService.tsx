@@ -125,7 +125,7 @@ const BrunoTreeService = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold leading-[1.15] mb-6 text-balance text-white">
               Introducing Bruno Tree Service: Let Our Family Take Care of Yours!
             </h1>
-            <p className="text-lg text-primary-foreground/80 mb-10 max-w-lg leading-relaxed">
+            <p className="text-lg text-white/80 mb-10 max-w-lg leading-relaxed">
               We take pride in delivering reliable tree care for residential and commercial properties across Charlotte and surrounding areas.
             </p>
             <div className="flex flex-wrap gap-4">
