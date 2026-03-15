@@ -122,7 +122,7 @@ const BrunoTreeService = () => {
             <span className="inline-block py-1.5 px-4 rounded-full bg-surface-elevated/20 backdrop-blur-sm text-primary-foreground text-xs font-bold uppercase tracking-widest mb-6 border border-primary-foreground/20">
               Expert Tree Care in North Carolina
             </span>
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold leading-[1.1] mb-6 text-balance text-primary-foreground">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold leading-[1.15] mb-6 text-balance text-white">
               Introducing Bruno Tree Service: Let Our Family Take Care of Yours!
             </h1>
             <p className="text-lg text-primary-foreground/80 mb-10 max-w-lg leading-relaxed">
