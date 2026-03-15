@@ -119,7 +119,7 @@ const BrunoTreeService = () => {
             transition={{ duration: 0.7, ease: easing }}
             className="max-w-2xl"
           >
-            <span className="inline-block py-1.5 px-4 rounded-full bg-surface-elevated/20 backdrop-blur-sm text-primary-foreground text-xs font-bold uppercase tracking-widest mb-6 border border-primary-foreground/20">
+            <span className="inline-block py-1.5 px-4 rounded-full bg-white/15 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-widest mb-6 border border-white/20">
               Expert Tree Care in North Carolina
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold leading-[1.15] mb-6 text-balance text-white">
