@@ -131,13 +131,13 @@ const BrunoTreeService = () => {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#quote"
-                className="px-8 py-4 bg-forest text-primary-foreground rounded-2xl font-semibold shadow-cta hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider"
+                className="px-8 py-4 bg-forest text-white rounded-2xl font-semibold shadow-cta hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider"
               >
                 Get a Free Quote
               </a>
               <a
                 href="tel:7043459861"
-                className="px-8 py-4 bg-surface-elevated/20 backdrop-blur-sm text-primary-foreground border border-primary-foreground/20 rounded-2xl font-semibold hover:bg-surface-elevated/30 transition-all text-sm uppercase tracking-wider"
+                className="px-8 py-4 bg-transparent text-white border border-white/40 rounded-2xl font-semibold hover:border-white/70 transition-all text-sm uppercase tracking-wider"
               >
                 Call Now
               </a>
