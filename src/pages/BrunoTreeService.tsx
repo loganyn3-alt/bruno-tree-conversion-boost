@@ -119,25 +119,25 @@ const BrunoTreeService = () => {
             transition={{ duration: 0.7, ease: easing }}
             className="max-w-2xl"
           >
-            <span className="inline-block py-1.5 px-4 rounded-full bg-surface-elevated/20 backdrop-blur-sm text-primary-foreground text-xs font-bold uppercase tracking-widest mb-6 border border-primary-foreground/20">
+            <span className="inline-block py-1.5 px-4 rounded-full bg-white/15 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-widest mb-6 border border-white/20">
               Expert Tree Care in North Carolina
             </span>
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold leading-[1.1] mb-6 text-balance text-primary-foreground">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold leading-[1.15] mb-6 text-balance text-white">
               Introducing Bruno Tree Service: Let Our Family Take Care of Yours!
             </h1>
-            <p className="text-lg text-primary-foreground/80 mb-10 max-w-lg leading-relaxed">
+            <p className="text-lg text-white/80 mb-10 max-w-lg leading-relaxed">
               We take pride in delivering reliable tree care for residential and commercial properties across Charlotte and surrounding areas.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
                 href="#quote"
-                className="px-8 py-4 bg-forest text-primary-foreground rounded-2xl font-semibold shadow-cta hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider"
+                className="px-8 py-4 bg-forest text-white rounded-2xl font-semibold shadow-cta hover:-translate-y-0.5 transition-all text-sm uppercase tracking-wider"
               >
                 Get a Free Quote
               </a>
               <a
                 href="tel:7043459861"
-                className="px-8 py-4 bg-surface-elevated/20 backdrop-blur-sm text-primary-foreground border border-primary-foreground/20 rounded-2xl font-semibold hover:bg-surface-elevated/30 transition-all text-sm uppercase tracking-wider"
+                className="px-8 py-4 bg-transparent text-white border border-white/40 rounded-2xl font-semibold hover:border-white/70 transition-all text-sm uppercase tracking-wider"
               >
                 Call Now
               </a>
@@ -146,27 +146,34 @@ const BrunoTreeService = () => {
         </div>
       </section>
 
+      {/* Wave Divider: Hero → Services */}
+      <div className="relative -mt-1">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="w-full h-12 md:h-20 block">
+          <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" fill="hsl(var(--background))" />
+        </svg>
+      </div>
+
       {/* Services Section */}
-      <section id="services" className="py-24 bg-forest">
+      <section id="services" className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-foreground mb-4">Our Services</h2>
-            <div className="w-20 h-1 bg-oak mx-auto rounded-full" />
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-foreground mb-4">Our Services</h2>
+            <div className="w-20 h-px bg-oak mx-auto" />
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, i) => (
               <motion.div
                 key={i}
-                whileHover={{ y: -8, scale: 1.02 }}
+                whileHover={{ y: -6, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/10 p-8 rounded-3xl text-center cursor-default group"
+                className="text-center cursor-default group p-6"
               >
-                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-primary-foreground/10 flex items-center justify-center text-primary-foreground group-hover:bg-primary-foreground/20 transition-colors">
-                  <service.icon size={32} strokeWidth={1.5} />
+                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center text-forest">
+                  <service.icon size={36} strokeWidth={1} />
                 </div>
-                <h3 className="text-lg font-serif font-bold text-primary-foreground mb-3">{service.title}</h3>
-                <p className="text-primary-foreground/70 text-sm leading-relaxed">{service.desc}</p>
+                <h3 className="text-lg font-serif font-bold text-foreground mb-3">{service.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{service.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -174,7 +181,7 @@ const BrunoTreeService = () => {
           <div className="text-center mt-12">
             <a
               href="#quote"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-surface-elevated/20 backdrop-blur-sm text-primary-foreground border border-primary-foreground/20 rounded-full font-semibold hover:bg-surface-elevated/30 transition-all text-sm"
+              className="inline-flex items-center gap-2 px-8 py-3 border border-forest text-forest rounded-full font-semibold hover:bg-forest hover:text-white transition-all text-sm"
             >
               Learn More <ChevronRight size={16} />
             </a>
@@ -182,8 +189,15 @@ const BrunoTreeService = () => {
         </div>
       </section>
 
+      {/* Wave Divider: Services → Testimonials */}
+      <div className="relative">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-10 md:h-16 block bg-background">
+          <path d="M0,30 C480,60 960,0 1440,30 L1440,60 L0,60 Z" fill="hsl(var(--secondary))" />
+        </svg>
+      </div>
+
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-24 bg-background">
+      <section id="testimonials" className="py-24 bg-secondary">
         <div className="max-w-4xl mx-auto px-6 text-center">
           {testimonials.map((t, i) => (
             <div key={i}>
